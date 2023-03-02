@@ -32,9 +32,9 @@ const PageContentBlock: React.FC<PageContentBlockProps> = ({ title, showFlashKey
                             target={'_blank'}
                             css={tw`no-underline text-zinc-600 hover:text-zinc-900 dark:(text-zinc-500 hover:text-zinc-300)`}
                         >
-                            Powered by zyy.sh&reg;
+                            Powered by zyy.sh
                         </a>
-                        &nbsp;&copy; 2015 - {new Date().getFullYear()}
+                        
                     </p>
                 </ContentContainer>
             </>
