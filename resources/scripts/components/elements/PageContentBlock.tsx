@@ -28,11 +28,11 @@ const PageContentBlock: React.FC<PageContentBlockProps> = ({ title, showFlashKey
                     <p css={tw`text-center text-zinc-600 dark:text-zinc-500 text-xs`}>
                         <a
                             rel={'noopener nofollow noreferrer'}
-                            href={'https://pterodactyl.io'}
+                            href={'https://zyy.sh'}
                             target={'_blank'}
                             css={tw`no-underline text-zinc-600 hover:text-zinc-900 dark:(text-zinc-500 hover:text-zinc-300)`}
                         >
-                            Pterodactyl&reg;
+                            Powered by zyy.sh&reg;
                         </a>
                         &nbsp;&copy; 2015 - {new Date().getFullYear()}
                     </p>
