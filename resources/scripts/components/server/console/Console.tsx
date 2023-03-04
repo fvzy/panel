@@ -92,12 +92,7 @@ export default () => {
         );
 
     const handlePowerChangeEvent = (state: string) =>
-        const logmarked = `
-┌────────────────────┐
- Server Marked as ${state}
-└────────────────────┘
-`
-        terminal.writeln(logmarked);
+    terminal.writeln(TERMINAL_PRELUDE + 'Server marked as ' + state + '...\u001b[0m');
 
     const handleCommandKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'ArrowUp') {
