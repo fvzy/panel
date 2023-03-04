@@ -93,9 +93,9 @@ export default () => {
 
     const handlePowerChangeEvent = (state: string) =>
         const logmarked = `
-┌─────────────────┐
-   Server Marked as ${state}
-└─────────────────┘
+┌────────────────────┐
+ Server Marked as ${state}
+└────────────────────┘
 `
         terminal.writeln(logmarked);
 
