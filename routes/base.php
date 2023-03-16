@@ -14,3 +14,19 @@ Route::get('/locales/locale.json', Base\LocaleController::class)
 
 Route::get('/{react}', [Base\IndexController::class, 'index'])
     ->where('react', '^(?!(\/)?(api|auth|admin|daemon)).+');
+/*
+|--------------------------------------------------------------------------
+| Cloud Servers Controller Routes
+|--------------------------------------------------------------------------
+|
+| Endpoint: /cloudservers
+|
+*/
+Route::group(['prefix' => 'cloudservers'], function () {
+    Route::get('/choose/game', 'CloudServersController@choose')->name('cloudservers.choose');
+    
+    Route::group(['prefix' => 'game'], function () {
+        Route::get('/configuration/{id}', 'CloudServersController@game')->name('cloudservers.game');
+        Route::post('/create/{id}', 'CloudServersController@creategame')->name('cloudservers.game.create');
+    });
+});
