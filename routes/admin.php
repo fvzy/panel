@@ -238,3 +238,37 @@ Route::group(['prefix' => 'nests'], function () {
     Route::delete('/egg/{egg:id}', [Admin\Nests\EggController::class, 'destroy']);
     Route::delete('/egg/{egg:id}/variables/{variable:id}', [Admin\Nests\EggVariableController::class, 'destroy']);
 });
+/*
+|--------------------------------------------------------------------------
+| Cloud Servers Controller Routes
+|--------------------------------------------------------------------------
+|
+| Endpoint: /cloudservers 
+|
+*/
+Route::group(['prefix' => 'cloudservers', 'middleware' => []], function () {
+    Route::get('/', 'CloudServersController@index')->name('admin.cloudservers.index');
+    Route::post('/update', 'CloudServersController@update')->name('admin.cloudservers.update');
+
+    Route::group(['prefix' => 'games', 'middleware' => []], function () {
+        Route::get('/', 'CloudServersController@games')->name('admin.cloudservers.games');
+        Route::post('/egg/status', 'CloudServersController@eggstatus')->name('admin.cloudservers.egg.status');
+        Route::get('/egg/settings/{id}', 'CloudServersController@eggsettings')->name('admin.cloudservers.egg.settings');
+        Route::get('/egg/create', 'CloudServersController@eggcreate')->name('admin.cloudservers.egg.create');
+        Route::post('/egg/store', 'CloudServersController@eggcreate2')->name('admin.cloudservers.egg.create.2');
+        Route::post('/egg/settings/update/{id}', 'CloudServersController@eggsettingsupdate')->name('admin.cloudservers.egg.settings.update');
+    });
+
+    Route::group(['prefix' => 'logs', 'middleware' => []], function () {
+        Route::get('/', 'CloudServersController@logs')->name('admin.cloudservers.logs');
+    });
+
+    Route::group(['prefix' => 'changelogs', 'middleware' => []], function () {
+        Route::get('/', 'CloudServersController@changelogs')->name('admin.cloudservers.changelogs');
+    });
+
+    Route::group(['prefix' => 'users', 'middleware' => []], function () {
+        Route::get('/', 'CloudServersController@users')->name('admin.cloudservers.users');
+        Route::post('/update/{id}', 'CloudServersController@updateuser')->name('admin.cloudservers.users.update');
+    });
+});
