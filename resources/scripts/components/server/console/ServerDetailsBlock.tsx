@@ -142,7 +142,7 @@ const ServerDetailsBlock = ({ className }: { className?: string }) => {
                 {status === 'offline' ? <span className={'text-gray-400'}>Offline</span> : bytesToString(stats.tx)}
             </StatBlock>
             <StatBlock
-                icon={<InboxStackIcon />}
+                icon={<DesktopComputerIcon />}
                 title={'Contact Me'}
                 color={getBackgroundColor(stats.cpu, limits.cpu)}
             >             
