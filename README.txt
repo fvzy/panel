@@ -4,7 +4,7 @@ Thank you for purchasing the Professional theme!
 
  - For installation and update instructions, read the INSTALL.txt file.
  - For support, you can go to my Discord server: https://discord.gg/Zjvvdrs8Vm (preferred)
-   OR you can email me at me@omame.xyz (response isn't guaranteed).
+   OR you can email me at hello@zyy.sh (response isn't guaranteed).
 
 TERMS AND CONDITIONS
 ====================
